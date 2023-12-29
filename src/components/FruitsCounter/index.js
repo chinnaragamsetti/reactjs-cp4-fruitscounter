@@ -1,4 +1,3 @@
-// Write your code here
 
 import { Component } from "react"
 
@@ -8,10 +7,10 @@ class Counter extends Component {
   state = { mango:0,banana:0}
 
   onIncrementbanana = () => {
-    this.setState((prevState) => ({prevState.banana: prevState.banana+ 1 }))
+    this.setState((prevState) => ({prevState.banana: prevState.banana + 1 }))
   }
   onIncrementmango = () => {
-    this.setState((prevState) => ({prevState.mango: prevState.mango+ 1 }))
+    this.setState((prevState) => ({prevState.mango: prevState.mango + 1 }))
   }
   render() {
     const {banana,mango } = this.state
@@ -22,11 +21,11 @@ class Counter extends Component {
                 <div className='imagescontainer'>
                     <div className='imagecontainer'>
                         <img src='https://assets.ccbp.in/frontend/react-js/mango-img.png' alt='mango' className='image'/>
-                        <button className='button'>Eat Mango</button>
+                        <button className='button' type='button' onClick={this.onIncrementmango}>Eat Mango</button>
                     </div>
                     <div className='imagecontainer'>
                         <img src='https://assets.ccbp.in/frontend/react-js/banana-img.png' alt ='banana' className='image'/>
-                        <button className='button'>Eat Banana</button>
+                        <button className='button' type='button' onClick={this.onIncrementbanana}>Eat Banana</button>
                     </div>
                 </div>                
             </div>
